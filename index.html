@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <main>
+        <section class="card">
+            <div class="card__content--desktop">
+                <header>
+                    <nav class="logo">
+                        <img src="images/logo.svg" alt="Logo">
+                    </nav>
+                </header>
+                <div class="card__hero">
+                    <img src="images/hero-mobile.jpg" alt="">
+                </div>
+                <div class="card__content">
+                    <h1> <span>We're</span> coming soon</h1>
+                    <p>Hello fellow shoppers! We're currently building our new fashion store.
+                        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+                    <form class="form-email" action="#" method="post" onsubmit="return false;" id="form-email">
+                        <div class="form-group">
+                            <input type="email" name="txtEmail" id="txtEmail" required="">
+                            <label class="placeholder" for="txtEmail">Email Address</label>
+                            <label class="invalid" for="txtEmail"><img src="images/icon-error.svg" alt="Error"></label>
+                        </div>
+                        <button type="submit" onclick="javascript:validEmail();"><img src="images/icon-arrow.svg"
+                                alt="Send"></button>
+                    </form>
+                </div>
+            </div>
+            <div class="card__hero--desktop">
+                <img src="images/hero-desktop.jpg" alt="">
+            </div>
+        </section>
+        <footer>
+            <p class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="https://mrubi.vercel.app/" target="_blank">Marcos Rubí</a>.
+            </p>
+        </footer>
+        <script src="js/scripts.js"></script>
+    </main>
+</body>
+
+</html>

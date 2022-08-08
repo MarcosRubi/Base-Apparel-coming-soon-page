@@ -1,0 +1,175 @@
+:root {
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100vh;
+
+    font-family: "Josefin Sans", sans-serif;
+    background: rgba(252,228,236,1);
+}
+.card {
+    width: 375px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--Desaturated-Red) 0px 8px 24px;
+    background-color: linear-gradient(135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%));
+}
+.card header {
+    padding: 20px 30px;
+}
+.card .logo img {
+    width: 125px;
+}
+.card__hero img {
+    width: 100%;
+}
+.card__content {
+    text-align: center;
+    padding: 0px 20px;
+}
+.card__content h1 {
+    font-size: 2.4em;
+    font-weight: 600;
+    letter-spacing: 10px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.card__content h1 span {
+    font-weight: 300;
+    color: var(--Soft-Red);
+}
+.card__content p {
+    color: var(--Soft-Red);
+    margin-bottom: 20px;
+}
+
+.form-email {
+    display: flex;
+    padding-bottom: 30px;
+}
+.form-email .form-group {
+    position: relative;
+    width: 100%;
+}
+.form-email label {
+    position: absolute;
+}
+.form-email label.placeholder {
+    top: 0;
+    left: 0;
+    transform: translate(25px, 15px);
+    color: var(--Desaturated-Red);
+    pointer-events: none;
+    transition: all 500ms;
+}
+.form-email label.invalid {
+    top: 0;
+    right: 0;
+    transform: translate(-30px, 10px);
+    opacity: 0;
+    pointer-events: none;
+}
+.form-email label.invalid.show {
+    opacity: 1;
+}
+.form-email input[type="email"] {
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid var(--Desaturated-Red);
+    padding-left: 15px;
+    outline: none;
+    width: 100%;
+    margin-left: 10px;
+    color: var(--Dark-Grayish-Red);
+    font-weight: 600;
+    font-size: 0.75em;
+}
+.form-email input[type="email"]:focus ~ label.placeholder,
+.form-email input[type="email"]:valid ~ label.placeholder {
+    font-size: 0.8em;
+    transform: translate(25px, -15px);
+    color: var(--Dark-Grayish-Red);
+}
+
+.form-email button[type="submit"] {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    transform: translateX(-25px);
+    cursor: pointer;
+    transition: all 300ms;
+    box-shadow: var(--Desaturated-Red) 0px 5px 15px;
+}
+.form-email button[type="submit"]:hover {
+    filter: brightness(0.9);
+}
+.card__hero--desktop {
+    display: none;
+}
+footer p {
+    text-align: center;
+}
+attribution {
+    font-size: 11px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        flex-direction: row;
+        width: 95%;
+        max-width: 900px;
+        text-align: start;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-color: #fff;
+        background-position: 0% 100%;
+    }
+    
+    .card__content--desktop {
+        flex-basis: 60%;
+        padding: 0px 60px 0px 60px;
+    }
+    .card header {
+        padding: 20px 0px;
+    }
+    .card__content {
+        text-align: start;
+        padding: 0px;
+    }
+    .card__hero {
+        display: none;
+    }
+    .card__hero--desktop {
+        display: block;
+        flex-basis:70%;
+    }
+    .card__hero--desktop img {
+        width: 100%;
+        display: flex;
+    }
+    .form-email .form-group {
+        margin-left: -12px;
+        width: 80%;
+    }
+    .form-email{
+        margin-top: 30px;
+    }
+}
